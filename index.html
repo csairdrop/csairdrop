@@ -6,8 +6,7 @@
 
 <title>CS Airdrop</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
-
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
@@ -24,113 +23,53 @@ display:flex;
 align-items:center;
 justify-content:center;
 font-family:'Poppins',sans-serif;
-color:white;
-background: radial-gradient(circle at top,#0f2027,#203a43,#000000);
-overflow:hidden;
-}
-
-/* animated glowing circles */
-
-body::before{
-content:'';
-position:absolute;
-width:600px;
-height:600px;
-background:linear-gradient(45deg,#00eaff,#0072ff);
-filter:blur(120px);
-top:-200px;
-left:-200px;
-opacity:0.5;
-animation:move1 10s infinite alternate;
-}
-
-body::after{
-content:'';
-position:absolute;
-width:600px;
-height:600px;
-background:linear-gradient(45deg,#ff0080,#ff8c00);
-filter:blur(120px);
-bottom:-200px;
-right:-200px;
-opacity:0.4;
-animation:move2 12s infinite alternate;
-}
-
-@keyframes move1{
-from{transform:translate(0,0)}
-to{transform:translate(120px,80px)}
-}
-
-@keyframes move2{
-from{transform:translate(0,0)}
-to{transform:translate(-120px,-60px)}
+background:#0b0e11;
+color:#fff;
 }
 
 /* card */
 
 .card{
-backdrop-filter:blur(20px);
-background:rgba(255,255,255,0.05);
-border:1px solid rgba(255,255,255,0.1);
-border-radius:25px;
-padding:45px;
-width:380px;
+background:#161a1e;
+border-radius:18px;
+padding:35px;
+width:360px;
 text-align:center;
-box-shadow:0 0 60px rgba(0,0,0,0.6);
-animation:fadeUp 1s ease;
-}
-
-@keyframes fadeUp{
-from{transform:translateY(40px);opacity:0}
-to{transform:translateY(0);opacity:1}
+box-shadow:0 0 30px rgba(0,0,0,0.6);
+border:1px solid rgba(255,255,255,0.05);
 }
 
 /* logo */
 
 .logo img{
-width:95px;
-height:95px;
+width:80px;
+height:80px;
 border-radius:50%;
-border:3px solid #00eaff;
-box-shadow:
-0 0 10px #00eaff,
-0 0 30px #00eaff,
-0 0 60px #0072ff;
-margin-bottom:15px;
-animation:float 3s ease-in-out infinite;
-}
-
-@keyframes float{
-0%,100%{transform:translateY(0)}
-50%{transform:translateY(-10px)}
+margin-bottom:12px;
+border:2px solid #f7a600;
 }
 
 /* title */
 
 h1{
 font-family:'Orbitron',sans-serif;
-font-size:34px;
-margin-bottom:10px;
-background:linear-gradient(90deg,#00eaff,#00ff9d);
--webkit-background-clip:text;
--webkit-text-fill-color:transparent;
+font-size:28px;
+margin-bottom:8px;
+color:#f7a600;
 }
 
 /* description */
 
 .desc{
-font-size:15px;
-line-height:1.7;
-opacity:0.9;
-margin-bottom:25px;
-color:#e6e6e6;
+font-size:14px;
+line-height:1.5;
+color:#c7c7c7;
+margin-bottom:18px;
 }
 
 .desc a{
-color:#ff4b4b;
+color:#ff4d4d;
 text-decoration:none;
-font-weight:500;
 }
 
 .desc a:hover{
@@ -143,39 +82,44 @@ text-decoration:underline;
 display:flex;
 align-items:center;
 justify-content:center;
-gap:10px;
-padding:14px;
-margin:14px 0;
-border-radius:12px;
+gap:8px;
+padding:12px;
+margin-top:12px;
+border-radius:8px;
 text-decoration:none;
-font-weight:600;
-font-size:16px;
-transition:0.35s;
+font-size:15px;
+font-weight:500;
+transition:0.3s;
 }
+
+/* group */
 
 .group{
-background:linear-gradient(45deg,#00c6ff,#0072ff);
+background:#0088cc;
 color:white;
-box-shadow:0 0 20px rgba(0,140,255,0.6);
 }
+
+.group:hover{
+background:#0099e6;
+}
+
+/* channel */
 
 .channel{
-background:linear-gradient(45deg,#ff0080,#ff5f6d);
-color:white;
-box-shadow:0 0 20px rgba(255,0,100,0.6);
+background:#f7a600;
+color:black;
 }
 
-.btn:hover{
-transform:translateY(-3px) scale(1.04);
-box-shadow:0 0 35px rgba(255,255,255,0.3);
+.channel:hover{
+background:#ffb300;
 }
 
 /* footer */
 
 .footer{
-margin-top:25px;
+margin-top:18px;
 font-size:12px;
-color:#bbb;
+color:#888;
 }
 
 </style>
@@ -186,25 +130,21 @@ color:#bbb;
 <div class="card">
 
 <div class="logo">
-<img src="logo.jpg" alt="CS Airdrop Logo">
+<img src="logo.jpg">
 </div>
 
 <h1>CS Airdrop</h1>
 
 <p class="desc">
-Assalamu Alaikum ❤️ <br><br>
+Assalamu Alaikum ❤️<br>
+Welcome to <b>CS Airdrop Community</b>. Your trusted place for the latest crypto airdrops, earning guides and updates.<br><br>
 
-Welcome to <b>CS Airdrop Community</b> ✨ <br>
-Your trusted place for the <b>latest crypto airdrops, earning guides, and updates</b>. 🚀 <br><br>
-
-💎 Daily Airdrop Opportunities <br>
-📢 Instant Updates from Telegram <br>
-🎥 Crypto Tutorials on YouTube <br><br>
+💎 Daily Airdrop Opportunities<br>
+📢 Instant Updates from Telegram<br>
+🎥 Crypto Tutorials on YouTube<br><br>
 
 <i class="fa-brands fa-youtube"></i>
-<a href="https://www.youtube.com/@CSAirdropTeamBD" target="_blank">
-Visit our YouTube Channel
-</a>
+<a href="https://www.youtube.com/@CSAirdropTeamBD" target="_blank">Visit our YouTube Channel</a>
 </p>
 
 <a href="https://t.me/CSdiscussion24" class="btn group">
@@ -216,7 +156,7 @@ Visit our YouTube Channel
 </a>
 
 <div class="footer">
-⚡ Powered by CS Airdrop Community
+Powered by CS Airdrop Community
 </div>
 
 </div>
