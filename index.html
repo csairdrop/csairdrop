@@ -3,7 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>CS Airdrop</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
@@ -13,46 +16,69 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family: 'Segoe UI', sans-serif;
 }
 
-.desc{
-font-size:15px;
-line-height:1.6;
-opacity:0.95;
-margin-bottom:25px;
-}
-
-.desc a:hover{
-text-decoration:underline;
-}
-  
 body{
 height:100vh;
 display:flex;
 align-items:center;
 justify-content:center;
-background: linear-gradient(270deg,#1e3c72,#2a5298,#00c6ff,#0072ff);
-background-size:800% 800%;
-animation: gradientMove 15s ease infinite;
+font-family:'Poppins',sans-serif;
+color:white;
+background: radial-gradient(circle at top,#0f2027,#203a43,#000000);
+overflow:hidden;
 }
 
-@keyframes gradientMove{
-0%{background-position:0% 50%}
-50%{background-position:100% 50%}
-100%{background-position:0% 50%}
+/* animated glowing circles */
+
+body::before{
+content:'';
+position:absolute;
+width:600px;
+height:600px;
+background:linear-gradient(45deg,#00eaff,#0072ff);
+filter:blur(120px);
+top:-200px;
+left:-200px;
+opacity:0.5;
+animation:move1 10s infinite alternate;
 }
+
+body::after{
+content:'';
+position:absolute;
+width:600px;
+height:600px;
+background:linear-gradient(45deg,#ff0080,#ff8c00);
+filter:blur(120px);
+bottom:-200px;
+right:-200px;
+opacity:0.4;
+animation:move2 12s infinite alternate;
+}
+
+@keyframes move1{
+from{transform:translate(0,0)}
+to{transform:translate(120px,80px)}
+}
+
+@keyframes move2{
+from{transform:translate(0,0)}
+to{transform:translate(-120px,-60px)}
+}
+
+/* card */
 
 .card{
-backdrop-filter: blur(20px);
-background: rgba(255,255,255,0.1);
-border-radius:20px;
-padding:40px;
-width:360px;
+backdrop-filter:blur(20px);
+background:rgba(255,255,255,0.05);
+border:1px solid rgba(255,255,255,0.1);
+border-radius:25px;
+padding:45px;
+width:380px;
 text-align:center;
-color:white;
-box-shadow:0 0 40px rgba(0,0,0,0.4);
-animation: fadeUp 1s ease;
+box-shadow:0 0 60px rgba(0,0,0,0.6);
+animation:fadeUp 1s ease;
 }
 
 @keyframes fadeUp{
@@ -60,34 +86,58 @@ from{transform:translateY(40px);opacity:0}
 to{transform:translateY(0);opacity:1}
 }
 
-.logo{
-font-size:60px;
-margin-bottom:15px;
-color:#00eaff;
-animation: float 3s ease-in-out infinite;
-}
+/* logo */
+
 .logo img{
-width:90px;
-height:90px;
+width:95px;
+height:95px;
 border-radius:50%;
-box-shadow:0 0 20px rgba(0,255,255,0.6);
-animation: float 3s ease-in-out infinite;
+border:3px solid #00eaff;
+box-shadow:
+0 0 10px #00eaff,
+0 0 30px #00eaff,
+0 0 60px #0072ff;
+margin-bottom:15px;
+animation:float 3s ease-in-out infinite;
 }
 
 @keyframes float{
 0%,100%{transform:translateY(0)}
-50%{transform:translateY(-8px)}
+50%{transform:translateY(-10px)}
 }
+
+/* title */
 
 h1{
-font-size:32px;
+font-family:'Orbitron',sans-serif;
+font-size:34px;
 margin-bottom:10px;
+background:linear-gradient(90deg,#00eaff,#00ff9d);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
 }
 
-p{
+/* description */
+
+.desc{
+font-size:15px;
+line-height:1.7;
 opacity:0.9;
-margin-bottom:30px;
+margin-bottom:25px;
+color:#e6e6e6;
 }
+
+.desc a{
+color:#ff4b4b;
+text-decoration:none;
+font-weight:500;
+}
+
+.desc a:hover{
+text-decoration:underline;
+}
+
+/* buttons */
 
 .btn{
 display:flex;
@@ -95,33 +145,37 @@ align-items:center;
 justify-content:center;
 gap:10px;
 padding:14px;
-margin:12px 0;
+margin:14px 0;
 border-radius:12px;
 text-decoration:none;
 font-weight:600;
 font-size:16px;
-transition:0.3s;
+transition:0.35s;
 }
 
 .group{
-background: linear-gradient(45deg,#00c6ff,#0072ff);
+background:linear-gradient(45deg,#00c6ff,#0072ff);
 color:white;
+box-shadow:0 0 20px rgba(0,140,255,0.6);
 }
 
 .channel{
-background: linear-gradient(45deg,#ff512f,#dd2476);
+background:linear-gradient(45deg,#ff0080,#ff5f6d);
 color:white;
+box-shadow:0 0 20px rgba(255,0,100,0.6);
 }
 
 .btn:hover{
-transform:scale(1.05);
-box-shadow:0 0 20px rgba(0,0,0,0.4);
+transform:translateY(-3px) scale(1.04);
+box-shadow:0 0 35px rgba(255,255,255,0.3);
 }
 
+/* footer */
+
 .footer{
-margin-top:20px;
+margin-top:25px;
 font-size:12px;
-opacity:0.7;
+color:#bbb;
 }
 
 </style>
@@ -143,32 +197,29 @@ Assalamu Alaikum ❤️ <br><br>
 Welcome to <b>CS Airdrop Community</b> ✨ <br>
 Your trusted place for the <b>latest crypto airdrops, earning guides, and updates</b>. 🚀 <br><br>
 
-💎 Get daily airdrop opportunities <br>
-📢 Join our Telegram community for instant updates <br>
-🎥 Watch tutorials and earning guides on YouTube <br><br>
+💎 Daily Airdrop Opportunities <br>
+📢 Instant Updates from Telegram <br>
+🎥 Crypto Tutorials on YouTube <br><br>
 
-<i class="fa-brands fa-youtube"></i> 
-<a href="https://www.youtube.com/@CSAirdropTeamBD" target="_blank" style="color:#ff4b4b;text-decoration:none;">
+<i class="fa-brands fa-youtube"></i>
+<a href="https://www.youtube.com/@CSAirdropTeamBD" target="_blank">
 Visit our YouTube Channel
 </a>
 </p>
 
 <a href="https://t.me/CSdiscussion24" class="btn group">
-<i class="fab fa-telegram"></i> Join Group
+<i class="fab fa-telegram"></i> Join Telegram Group
 </a>
 
 <a href="https://t.me/CSAirdropTeamBD" class="btn channel">
-<i class="fab fa-telegram"></i> Join Channel
+<i class="fab fa-telegram"></i> Join Telegram Channel
 </a>
 
 <div class="footer">
-Powered by CS Airdrop Community
+⚡ Powered by CS Airdrop Community
 </div>
 
 </div>
 
 </body>
-
 </html>
-
-
