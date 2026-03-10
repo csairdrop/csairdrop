@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CS Airdrop Community</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family: 'Segoe UI', sans-serif;
+}
+
+body{
+height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+background: linear-gradient(270deg,#1e3c72,#2a5298,#00c6ff,#0072ff);
+background-size:800% 800%;
+animation: gradientMove 15s ease infinite;
+}
+
+@keyframes gradientMove{
+0%{background-position:0% 50%}
+50%{background-position:100% 50%}
+100%{background-position:0% 50%}
+}
+
+.card{
+backdrop-filter: blur(20px);
+background: rgba(255,255,255,0.1);
+border-radius:20px;
+padding:40px;
+width:360px;
+text-align:center;
+color:white;
+box-shadow:0 0 40px rgba(0,0,0,0.4);
+animation: fadeUp 1s ease;
+}
+
+@keyframes fadeUp{
+from{transform:translateY(40px);opacity:0}
+to{transform:translateY(0);opacity:1}
+}
+
+.logo{
+font-size:60px;
+margin-bottom:15px;
+color:#00eaff;
+animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float{
+0%,100%{transform:translateY(0)}
+50%{transform:translateY(-8px)}
+}
+
+h1{
+font-size:32px;
+margin-bottom:10px;
+}
+
+p{
+opacity:0.9;
+margin-bottom:30px;
+}
+
+.btn{
+display:flex;
+align-items:center;
+justify-content:center;
+gap:10px;
+padding:14px;
+margin:12px 0;
+border-radius:12px;
+text-decoration:none;
+font-weight:600;
+font-size:16px;
+transition:0.3s;
+}
+
+.group{
+background: linear-gradient(45deg,#00c6ff,#0072ff);
+color:white;
+}
+
+.channel{
+background: linear-gradient(45deg,#ff512f,#dd2476);
+color:white;
+}
+
+.btn:hover{
+transform:scale(1.05);
+box-shadow:0 0 20px rgba(0,0,0,0.4);
+}
+
+.footer{
+margin-top:20px;
+font-size:12px;
+opacity:0.7;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+<div class="logo">
+<i class="fab fa-telegram"></i>
+</div>
+
+<h1>CS Airdrop</h1>
+
+<p>
+Welcome to our crypto airdrop community.  
+Join our Telegram group and channel to get the latest  
+airdrop updates, crypto news, and earning opportunities.
+</p>
+
+<a href="https://t.me/yourgroup" class="btn group">
+<i class="fab fa-telegram"></i> Join Group
+</a>
+
+<a href="https://t.me/yourchannel" class="btn channel">
+<i class="fab fa-telegram"></i> Join Channel
+</a>
+
+<div class="footer">
+Powered by CS Airdrop Community
+</div>
+
+</div>
+
+</body>
+</html>
